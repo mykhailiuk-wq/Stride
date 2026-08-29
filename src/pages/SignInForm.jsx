@@ -3,9 +3,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { loadUsers } from "../api/users";
-import CustomInput from "../components/CustomInput";
-import CustomButton from "../components/CustomButton";
-import GoogleAccount from "../components/GoogleAccount";
+import CustomButton from "../components/Common/CustomButton";
+import GoogleAccount from "../components/Common/GoogleAccount";
 
 export default function SignInForm(){
 

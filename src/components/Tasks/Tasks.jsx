@@ -1,8 +1,8 @@
 //vite-project\src\components\Tasks.jsx
 
 import Task from "./Task";
-import CustomButton from "./CustomButton"
-import { loadTasks } from "../api/tasks";
+import CustomButton from "../Common/CustomButton"
+import { loadTasks } from "../../API/tasks";
 import TaskInput from "./TaskInput";
 import { useState } from "react";
 
@@ -16,7 +16,7 @@ export default function Tasks({ tasks = loadTasks(), onTaskToggle = () => {} }){
 
     return (
         <div className="flex flex-col w-full gap-3 rounded pt-4">
-            <p className="text-gray-500">My tasks</p>
+            <h2 className="font-semibold text-lg text-blue-500">My tasks</h2>
             {tasks.map(task => (
                 <Task 
                     key={task.id}
@@ -25,8 +25,8 @@ export default function Tasks({ tasks = loadTasks(), onTaskToggle = () => {} }){
                     isDone={task.isDone}
                 ></Task>
             ))}
-            <CustomButton width={"max"} onClick={() => createNewTask(null, "")} buttonText={"Add new task"} variant="filled"></CustomButton>
-            {showTaskInput && <TaskInput />} 
+            { !showTaskInput && <CustomButton width={"max"} onClick={() => createNewTask(null, "")} buttonText={"Add new task"} variant="filled"></CustomButton> }
+            { showTaskInput && <TaskInput /> } 
         </div>
     )
 }

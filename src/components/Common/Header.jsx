@@ -11,7 +11,7 @@ export default function Header() {
                 <img src="public/logo.svg"  className="h-6 w-6" />
                 <p className="font-semibold text-md text-black">Stride</p>
             </div>
-            <div className="flex flex-row items-center gap-2">
+            <div className="flex flex-row items-center gap-2 md:gap-0.5">
                 <CustomLink to="/tasks">Tasks</CustomLink>
                 <CustomLink to="/tasks">Habits</CustomLink>
                 <CustomLink to="/tasks">Notes</CustomLink>

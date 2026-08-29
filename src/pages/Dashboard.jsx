@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
-import Tasks from "../components/Tasks";
-import Calendar from "../components/Calendar";
-import PieChart from "../components/PieChart";
-import Histogram from "../components/Histogram";
-import Habits from "../components/Habits";
-import { loadTasks } from "../api/tasks";
-import { toggleTask } from "../api/tasks";
+import Tasks from "../components/Tasks/Tasks";
+import Calendar from "../components/Stats/Calendar";
+import PieChart from "../components/Stats/PieChart";
+import Histogram from "../components/Stats/Histogram";
+import Habits from "../components/Habits/Habits";
+import { loadTasks } from "../API/tasks";
+import { toggleTask } from "../API/tasks";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from 'react-dom';
-import { Notes } from "../components/Notes";
+import { Notes } from "../components/Notes/Notes";
+import TaskPercentage from "../components/Stats/TaskPercentage";
+import HabitConsistency from "../components/Stats/HabitConsistency";
 
 export default function Dashboard(){
     const [tasks, setTasks] = useState([]);
@@ -28,7 +30,7 @@ export default function Dashboard(){
     return (
         <div className="flex flex-col p-4 sm:p-6 md:p-8 gap-3 sm:gap-6">
             <div className="mx-auto w-full max-w-7xl">
-                <h1 className="text-3xl sm:text-4xl font-bold">Dashboard</h1>
+                <h1 className="text-4xl font-bold">Dashboard</h1>
                 <div className="grid grid-cols-1 gap-1 sm:gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8">
                     <div className="flex flex-col gap-4 sm:gap-6">
                         <div className="w-full">
@@ -42,7 +44,23 @@ export default function Dashboard(){
                         <div className="w-full">
                             <Habits></Habits>
                         </div>
-                        <div className="w-full h-full flex justify-center lg:justify-start">
+                        <div className="w-full h-full gap-2 flex flex-col justify-center lg:justify-start">
+                            <div className="flex flex-row gap-2 w-full h-fit">
+                                <TaskPercentage tasks={[
+                                    {id: 1, name: "Task 1", completed: true},
+                                    {id: 2, name: "Task 2", completed: false},
+                                    {id: 3, name: "Task 3", completed: true}, 
+                                    {id: 3, name: "Task 3", completed: false}, 
+                                    {id: 3, name: "Task 3", completed: true}, 
+                                    {id: 3, name: "Task 3", completed: false} 
+                                ]} />
+                                <HabitConsistency habit={{
+                                    name: "Exercise",
+                                    startDate: "2023-01-01",
+                                    endDate: "2023-12-31",
+                                    completedDays: 200
+                                }} />
+                            </div>
                             <PieChart tasks={tasks}></PieChart>
                         </div>
                     </div>

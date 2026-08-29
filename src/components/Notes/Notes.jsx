@@ -1,5 +1,5 @@
 import { Note } from "./Note";
-import CustomButton from "./CustomButton";
+import CustomButton from "../Common/CustomButton";
 
 export function Notes({ notes }) {
     return (

@@ -1,11 +1,11 @@
 // vite-project\src\components\LoginForm.jsx
 
 import { useState, useEffect } from "react";
-import { loadUsers } from "../api/users";
+import { loadUsers } from "../API/users";
 import { Link, useNavigate } from "react-router-dom";
-import CustomInput from "../components/CustomInput";
-import CustomButton from "../components/CustomButton";
-import CustomLink from "../components/CustomLink";
+import CustomInput from "../components/Common/CustomInput";
+import CustomButton from "../components/Common/CustomButton";
+import CustomLink from "../components/Common/CustomLink";
 
 export default function LoginForm(){
     

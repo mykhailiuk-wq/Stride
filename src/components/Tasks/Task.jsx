@@ -13,7 +13,7 @@ export default function Task({ name, deadline }) {
                 type="checkbox"
                 checked={isDone}
                 onChange={handleClick}
-                className="h-4 w-4 shrink-0 cursor-pointer"
+                className="h-4 w-4 shrink-0 cursor-pointer hover:border-black hover:border-2"
             />
 
             <p

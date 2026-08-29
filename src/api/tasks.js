@@ -20,8 +20,8 @@ export function loadTasks() {
     return tasks;
 }
 
-export function saveTasks(tasks) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+export function saveTask(task) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(task));
 }
 
 export function toggleTask(tasks, id) {

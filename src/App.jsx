@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import LoginForm from "./pages/LoginForm";
 import SignInForm from "./pages/SignInForm";
 import Dashboard from './pages/Dashboard';
-import Header from './components/Header';
+import Header from './components/Common/Header';
 
 export default function App() {
   return (
