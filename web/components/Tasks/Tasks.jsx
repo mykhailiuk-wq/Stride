@@ -1,12 +1,12 @@
-//vite-project\src\components\Tasks.jsx
+//vite-project\web\components\Tasks.jsx
 
 import Task from "./Task";
 import CustomButton from "../Common/CustomButton"
-import { loadTasks } from "../../API/tasks";
+import { getTasks } from "../../API/tasks";
 import TaskInput from "./TaskInput";
 import { useState } from "react";
 
-export default function Tasks({ tasks = loadTasks(), onTaskToggle = () => {} }){
+export default function Tasks({ tasks = getTasks(), onTaskToggle = () => {} }){
     const [showTaskInput, setShowTaskInput] = useState(false);
 
     const createNewTask = (deadline, name) => {

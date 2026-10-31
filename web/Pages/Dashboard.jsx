@@ -4,7 +4,7 @@ import Calendar from "../components/Stats/Calendar";
 import PieChart from "../components/Stats/PieChart";
 import Histogram from "../components/Stats/Histogram";
 import Habits from "../components/Habits/Habits";
-import { loadTasks } from "../API/tasks";
+import { getTasks } from "../API/tasks";
 import { toggleTask } from "../API/tasks";
 import { useNavigate } from "react-router-dom";
 import { createPortal } from 'react-dom';
@@ -46,14 +46,7 @@ export default function Dashboard(){
                         </div>
                         <div className="w-full h-full gap-2 flex flex-col justify-center lg:justify-start">
                             <div className="flex flex-row gap-2 w-full h-fit">
-                                <TaskPercentage tasks={[
-                                    {id: 1, name: "Task 1", completed: true},
-                                    {id: 2, name: "Task 2", completed: false},
-                                    {id: 3, name: "Task 3", completed: true}, 
-                                    {id: 3, name: "Task 3", completed: false}, 
-                                    {id: 3, name: "Task 3", completed: true}, 
-                                    {id: 3, name: "Task 3", completed: false} 
-                                ]} />
+                                <TaskPercentage tasks={getTasks()} />
                                 <HabitConsistency habit={{
                                     name: "Exercise",
                                     startDate: "2023-01-01",

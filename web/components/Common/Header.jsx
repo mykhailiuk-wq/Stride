@@ -1,5 +1,5 @@
-// vite-project\src\components\Header.jsx
-// vite-project\src\assets\logo.svg
+// vite-project\web\components\Header.jsx
+// vite-project\web\assets\logo.svg
 
 import CustomLink from "./CustomLink";
 
@@ -18,8 +18,8 @@ export default function Header() {
                 
             </div>
             <div className="flex flex-row items-center gap-2">
-                <CustomLink className="bg-blue-500 hover:text-white text-white transition-all duration-300 ease-in-out hover:bg-blue-400" to="/">Log in</CustomLink>
-                <CustomLink className="border border-blue-500 text-blue-500 transition-all duration-300 ease-in-out font-normal hover:border-blue-300 hover:text-blue-300" to="/signin">Sign in</CustomLink>
+                <CustomLink className="bg-blue-500 hover:text-white text-white transition-all duration-300 ease-in-out hover:bg-blue-400 rounded" to="/">Log in</CustomLink>
+                <CustomLink className="border border-blue-500 text-blue-500 transition-all duration-300 ease-in-out font-normal hover:border-blue-300 rounded hover:text-blue-300" to="/signin">Sign in</CustomLink>
             </div>
         </nav>
     );

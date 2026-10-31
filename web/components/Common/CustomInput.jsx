@@ -1,4 +1,4 @@
-// vite-project\src\components\CustomInput.jsx
+// vite-project\web\components\CustomInput.jsx
 
 export default function CustomInput({inputType, placeholderText, value, name, onChange}){
   return (

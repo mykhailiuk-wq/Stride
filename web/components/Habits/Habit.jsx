@@ -1,4 +1,4 @@
-//vite-project\src\components\Habit.jsx
+//vite-project\web\components\Habit.jsx
 import { useState } from "react"
 
 export default function Habit({name, frequency}){

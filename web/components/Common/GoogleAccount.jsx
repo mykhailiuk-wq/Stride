@@ -1,4 +1,4 @@
-//vite-project\src\components\GoogleAccount.jsx
+//vite-project\web\components\GoogleAccount.jsx
 
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";

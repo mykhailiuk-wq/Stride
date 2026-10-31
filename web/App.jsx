@@ -1,4 +1,4 @@
-//vite-project\src\App.jsx
+//vite-project\web\App.jsx
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import LoginForm from "./pages/LoginForm";
 import SignInForm from "./pages/SignInForm";

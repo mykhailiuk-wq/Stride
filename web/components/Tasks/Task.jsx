@@ -4,6 +4,7 @@ export default function Task({ name, deadline }) {
     const [isDone, setIsDone] = useState(false);
 
     const handleClick = () => {
+        console.log(`Task "${name}" is ${isDone ? "not done" : "done"}`);
         setIsDone(!isDone);
     };
 

@@ -1,4 +1,4 @@
-// vite-project\src\components\LoginForm.jsx
+// vite-project\web\components\LoginForm.jsx
 
 import { useState, useEffect } from "react";
 import { loadUsers } from "../API/users";
